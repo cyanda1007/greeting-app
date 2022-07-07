@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  background-color: red;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+.filter {
+  color: yellow;
+}
+
+input[type="radio"] {
+  margin: 1em;
+  color: grey;
+}
+
+button {
+  color: darkslategrey;
+}
+
+.count {
+  font-size: 4em;
+  padding: 0.1em;
+  border: 2px solid;
+  background-color: orchid;
+  border-radius: 0.1em;
+}
+
+h1 {
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+  color: yellowgreen;
+}
+@media only screen and (max-width: 7600px) {
+  .container {
+    flex-direction: column;
+  }
+  input[type="radio"] {
+    margin: 1em;
+    color: grey;
+  }
+}
