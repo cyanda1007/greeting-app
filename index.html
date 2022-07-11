@@ -9,48 +9,50 @@
 
   <body>
     <div class="container">
-      <div>
-        <h1>Greeting App</h1>
+      <h1>Greeting App</h1>
 
-        <div class="message"></div>
+      <div class="message"></div>
 
-        <form>
-          <input
-            type="text"
-            class="languageEntered"
-            placeholder="enter a name"
-          />
-          <span class="count"></span>
-          <button class="addLanguage">Greet</button>
-          <button class="remove">Reset</button>
-        </form>
-
-        <div class="filter">
-          <strong>Filter by language</strong>
-
-          <input
-            type="radio"
-            name="language"
-            class="radioZulu"
-            value="zulu"
-          />Isizulu
-          <input
-            type="radio"
-            name="language"
-            class="radioEnglish"
-            value="engfa"
-          />English
-          <input
-            type="radio"
-            name="language"
-            class="radioXhosa"
-            value="xhosa"
-          />
-          Isixhosa
+      <form>
+        <div class="display">
+          <div class="input">
+            <label for="name" class="name-error"> </label>
+            <input
+              type="text"
+              class="languageEntered"
+              placeholder="enter a name"
+              name="name"
+            />
+          </div>
+          <div class="count">0</div>
         </div>
-        <hr />
-        <div class="typeOfLanguage"></div>
+        <button class="addLanguage">Greet</button>
+        <button class="remove">Reset</button>
+      </form>
+
+      <div class="filter">
+        <label for="language" class="language-error"
+          >Please select one language</label
+        >
+        <strong>Filter by language</strong>
+
+        <input
+          type="radio"
+          name="language"
+          class="radioZulu"
+          value="zulu"
+        />Isizulu
+        <input
+          type="radio"
+          name="language"
+          class="radioEnglish"
+          value="engfa"
+        />English
+        <input type="radio" name="language" class="radioXhosa" value="xhosa" />
+        Isixhosa
       </div>
+      <hr />
+      <div class="typeOfLanguage"></div>
     </div>
     <script src="./greeting.js"></script>
     <script src="./greeting.dom.js"></script>

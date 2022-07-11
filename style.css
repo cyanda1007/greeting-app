@@ -1,24 +1,50 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .container {
-  width: 90%;
-  margin: auto;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 .filter {
   color: yellow;
 }
-
+.display input {
+  padding: 10px;
+}
 input[type="radio"] {
   margin: 1em;
   color: grey;
 }
 
+.display {
+  display: flex;
+  flex-direction: row;
+}
+
 button {
   color: darkslategrey;
+}
+
+.name-error {
+  color: red;
+  margin-bottom: 7px;
+}
+.language-error {
+  color: red;
+  margin-top: 13px;
+  display: none;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
 
 .count {
@@ -27,6 +53,7 @@ button {
   border: 2px solid;
   background-color: orchid;
   border-radius: 0.1em;
+  margin-left: 10px;
 }
 
 h1 {
