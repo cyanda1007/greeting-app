@@ -16,7 +16,7 @@
       <form>
         <div class="display">
           <div class="input">
-            <label for="name" class="name-error"> </label>
+            <label for="name" class="name-error">Please enter a name</label>
             <input
               type="text"
               class="languageEntered"
@@ -24,18 +24,9 @@
               name="name"
             />
           </div>
+
           <div class="count">0</div>
         </div>
-        <button class="addLanguage">Greet</button>
-        <button class="remove">Reset</button>
-      </form>
-
-      <div class="filter">
-        <label for="language" class="language-error"
-          >Please select one language</label
-        >
-        <strong>Filter by language</strong>
-
         <input
           type="radio"
           name="language"
@@ -50,7 +41,18 @@
         />English
         <input type="radio" name="language" class="radioXhosa" value="xhosa" />
         Isixhosa
-      </div>
+        <div class="filter">
+          <label for="language" class="language-error"
+            >Please select one language</label
+          >
+          <strong>Filter by language</strong>
+        </div>
+        <div>
+          <button class="addLanguage">Greet</button>
+          <button class="remove">Reset</button>
+        </div>
+      </form>
+
       <hr />
       <div class="typeOfLanguage"></div>
     </div>
