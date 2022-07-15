@@ -9,9 +9,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /* background: url(GettyImages-537436868-58e097d93df78c5162fcf65e.jpg) no-repeat; */
+  background: url(GettyImages-537436868-58e097d93df78c5162fcf65e.jpg) no-repeat;
   background-position: center center;
   background-size: cover;
+  color: yellow;
 }
 .filter {
   color: yellow;
