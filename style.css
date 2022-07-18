@@ -24,6 +24,11 @@ input[type="radio"] {
   margin: 1em;
   color: grey;
 }
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .display {
   display: flex;
@@ -40,6 +45,11 @@ button {
   display: none;
 }
 .language-error {
+  color: red;
+  margin-top: 13px;
+  display: none;
+}
+.duplicate {
   color: red;
   margin-top: 13px;
   display: none;

@@ -9,6 +9,7 @@ const clearBtn = document.querySelector(".remove");
 const calculate = document.querySelector(".count");
 const errorMessage = document.querySelector(".name-error");
 const languageErrorMessage = document.querySelector(".language-error");
+const repeatedName = document.querySelector(".duplicate");
 calculate.innerHTML =
   localStorage.getItem("list") === null
     ? 0
@@ -27,25 +28,36 @@ radioEnglish.addEventListener("click", () => {
 radioXhosa.addEventListener("click", () => {
   checked = true;
 });
-
+function timeOut() {
+  repeatedName.setAttribute("style", "display:none");
+  errorMessage.setAttribute("style", "display:none");
+  languageErrorMessage.setAttribute("style", "display:none");
+}
 greetBtn.addEventListener("click", (e) => {
   e.preventDefault();
   let name = firstName.value;
-
+  if (listName.indexOf(name) >= 0) {
+    repeatedName.style.display = "block";
+    setTimeout(timeOut, 3000);
+    throw new Error("Name has already been greeted");
+  }
   const checkedRadioBtn = document.querySelector(
     "input[name='language']:checked"
   );
 
   if (name === "" || name === undefined) {
     errorMessage.style.display = "block";
+    setTimeout(timeOut, 3000);
     throw new Error("Please enter a name");
   } else if (/[0-9]/.test(name)) {
     errorMessage.innerHTML = "Please put letters only";
+    setTimeout(timeOut, 3000);
     throw new Error("Please put letters only");
   }
 
   if (checked === false) {
     languageErrorMessage.style.display = "block";
+    setTimeout(timeOut, 3000);
     throw new Error("please select one language");
   }
 
@@ -62,7 +74,11 @@ greetBtn.addEventListener("click", (e) => {
   if (checkedRadioBtn.value === "xhosa") {
     disLanguage.innerHTML = domFunction.xhosaGreeting(name);
   }
-  listName.push(name);
+
+  if (listName.indexOf(name) < 0) {
+    listName.push(name);
+  }
+  // listName.push(name);
   localStorage.setItem("list", JSON.stringify(listName));
   localStorage.getItem("list", JSON.stringify(listName));
   calculate.innerHTML =
@@ -72,6 +88,7 @@ greetBtn.addEventListener("click", (e) => {
 });
 clearBtn.addEventListener("click", (e) => {
   e.preventDefault();
+  disLanguage.innerHTML = "";
   localStorage.clear("list", JSON.stringify(listName));
   calculate.innerHTML =
     localStorage.getItem("list") === null
