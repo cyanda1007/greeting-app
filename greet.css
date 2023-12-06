@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,200&display=swap');
+
+body{
+    font-family: 'Barlow Condensed',
+        sans-serif;
+}
+.main{
+    /* border: 1px solid red; */
+    height: 100vh;
+}
+.greetForm{
+    border: 1px solid grey;
+    height: 400px;
+    /* background-color: cyan; */
+    background-color: #303e49;
+
+}
+.errorDiv{
+    height: 20px;
+    width: 80%;
+    margin: auto;
+    color: white;
+
+}
+.sucessful{
+    background-color: green;
+
+}
+.danger{
+    background-color: #bb1f28;
+}
+.form{
+
+    height: 250px;
+    
+    margin: auto;
+    text-align:center;
+    
+}
+.nameInput{
+   height: 40px;
+   border: none;
+   border-bottom: 1px solid grey;
+   outline: none;
+
+
+}
+.countDiv{
+    display: inline-block;
+    margin-top: 20px;
+  
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translateY(-11px);
+    
+}
+.countCircle{
+    width: 50px;
+    height:50px;
+    display: inline-block;
+ 
+    border-radius: 50%;
+    margin-top: 5px;
+    transform: translateY(14px);
+    background-color: #cac08b;
+}
+.count{
+    margin: 0px;
+    font-size: 30px;
+    color: #5c7487;
+}
+.language{
+ 
+    width: 50px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 25px;
+    color: white;
+}
+.greetingLanguages{
+    margin-top: 40px;
+}
+.buttons{
+    margin-top: 30px;
+   
+}
+.btn{
+    height: 40px;
+    width: 80px;
+    background-color:#303e49;
+    color: white;
+    border: 1px solid #bb1f28;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.greetBtn{
+margin-right: 30px;
+}
+.greetDiv{
+    border: 1px solid white;
+    height: 290px;
+    transform: translateY(-135px);
+    border-radius: 50%;
+    background-color: white;
+}
+.greetings{
+    border: 1px solid #303e49;
+    margin: auto;
+    margin-top: 80px;
+    width: 90%;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #303e49;
+}
+.greetAnimation{
+    animation-name: playTime;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+.greetMessage{
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    font-size: 24px;
+    color: white;
+}
+.deco{
+   
+    width: 10px;
+    height: 10px;
+    margin-left: 60px;
+    border-radius: 50%;
+    background-color: #cac08b;
+}
+.dec1{
+    margin-top: 40px;
+    height: 20px;
+    width: 20px;
+
+}
+.dec2{
+    margin-top:5px;
+    margin-left: 50px; 
+}
+.greeting{
+    opacity:1
+}
+ @keyframes playTime{
+ 
+
+  100%{
+      opacity: 0
+  }
+} 
+@media screen and (max-width: 415px){
+
+    .nameInput{
+        margin-right: 10px;
+    }
+   
+}
+@media screen and (min-width: 500px){
+    .nameInput{
+        margin-right: 20px;
+    }
+}
+@media screen and (min-width: 700px){
+    .greetings{
+        width: 400px;
+    }
+    .greetForm{
+        height: 470px;
+    }
+    body{
+        font-size: 24px;
+    }
+    .errorDiv{
+        height: 50px;
+        width: 40%;
+    }
+    .language{
+        font-size: 16px;
+    }
+}
